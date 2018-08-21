@@ -10,15 +10,3 @@ function insertDash(num) {
   }
   return withDash;
 }
-
-
-
-let x = -4%2
-undefined
-x
--0
-false
-x*x
-0
-x === -x
-true
