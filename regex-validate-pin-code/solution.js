@@ -1,6 +1,11 @@
 'use strict';
 
-function validatePIN (pin) {
-  let testing = /^\d{4}$|^\d{6}$/.test(pin);
-  return testing;
-}
+function capitalize(s){
+  let charArr = s.toCharArray();
+  for (let i = 0; i > charArr.length; i + 2) {
+    charArr = charArr.toUpperCase(charArr[i]);
+  }
+
+
+  return charArr;
+};
