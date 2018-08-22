@@ -1,30 +1,27 @@
 'use strict';
 
-function disemvowel(str) {
-  let vowelStr = 'aeiouAEIOU';
-  let noVowStr = '';
-  let vowelArray = vowelStr.split('');
-  let inputArray = str.split('');
-  let i = 0;
-  while (i <= inputArray.length) {
-    let match = false;
-    let j = 0;
-    while ((match === false) && (j <= vowelStr.length)) {
-      if (inputArray[i] === vowelArray.charAt(j)) {
-        match = true;
-      }
-      else {
-        j++;
-      }
-    }
-    if (match === false) {
-      noVowStr = str.charAt(i);
-    }
-    else {
-      i++;
-    }
-  }
-  return noVowStr;
-}
+// function disemvowel(str) {
+//   let vowelStr = 'aeiouAEIOU';
+//   let noVowArray = [];
+//   let vowelArray = vowelStr.split('');
+//   let inputArray = str.split('');
+//   for (let i = 0; i <= inputArray.length; i++) {
+//     let j = 0;
+//     while (( j <= vowelArray.length)) {
+//       if (inputArray[i] === vowelArray[j]) {
+//       }
+//       else {
+//         noVowArray += inputArray[i];
+//       }
+//     }
+//   }
+//   return String(noVowArray);
+// }
 
-disemvowel('abcaeiouabc');
+// disemvowel('abcaeiouabc');
+
+//I was vetoed on solving it without being cute...
+
+function disemvowel(str) {
+  return str.replace(/[aeiou]/ig, '');
+}
